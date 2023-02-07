@@ -53,6 +53,4 @@ public class TestApplication {
         cellsFileConvert.getResultPath("C:\\Users\\AbelEthan\\IdeaProjects\\code-demo\\aspose-demo\\src\\main\\resources\\testExcel.xlsx");
         System.out.println("EXCEL转换时间：" + (System.currentTimeMillis() - cellsStartMillis));
     }
-
-
 }

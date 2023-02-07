@@ -26,6 +26,4 @@ public class WordsFileConvert extends AbstractFileConvert {
         Document doc = new Document(filePath);
         doc.save(os, SaveFormat.PDF);
     }
-
-
 }
