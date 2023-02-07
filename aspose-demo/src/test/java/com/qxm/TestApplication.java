@@ -14,9 +14,29 @@ public class TestApplication {
     @Test
     public void testWordToPdf() {
         long startMillis = System.currentTimeMillis();
-        IFileConvert fileConvert = new WordFileConvert();
-        String pdfFilePath = fileConvert.fileToPdf("C:\\Users\\AbelEthan\\IdeaProjects\\code-demo\\aspose-demo\\src\\main\\resources\\testWord.docx");
+        AbstractFileConvert fileConvert = new WordsFileConvert();
+        String pdfFilePath = fileConvert.getResultPath("C:\\Users\\AbelEthan\\IdeaProjects\\code-demo\\aspose-demo\\src\\main\\resources\\testWord.docx");
         System.out.println(System.currentTimeMillis() - startMillis);
         System.out.println(pdfFilePath);
     }
+
+    @Test
+    public void testSlidesToPdf(){
+        long startMillis = System.currentTimeMillis();
+        AbstractFileConvert fileConvert = new SlidesFileConvert();
+        String pdfFilePath = fileConvert.getResultPath("C:\\Users\\AbelEthan\\IdeaProjects\\code-demo\\aspose-demo\\src\\main\\resources\\testPpt.pptx");
+        System.out.println(System.currentTimeMillis() - startMillis);
+        System.out.println(pdfFilePath);
+    }
+
+    @Test
+    public void testCellsToPdf(){
+        long startMillis = System.currentTimeMillis();
+        AbstractFileConvert fileConvert = new CellsFileConvert();
+        String pdfFilePath = fileConvert.getResultPath("C:\\Users\\AbelEthan\\IdeaProjects\\code-demo\\aspose-demo\\src\\main\\resources\\testExcel.xlsx");
+        System.out.println(System.currentTimeMillis() - startMillis);
+        System.out.println(pdfFilePath);
+    }
+
+
 }
