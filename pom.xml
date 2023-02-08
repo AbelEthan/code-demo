@@ -11,6 +11,7 @@
 
     <modules>
         <module>aspose-demo</module>
+        <module>webservice-demo</module>
     </modules>
 
     <properties>
@@ -19,6 +20,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>4.12</junit.version>
         <aspose.version>20.7</aspose.version>
+        <spring.boot.version>2.2.6.RELEASE</spring.boot.version>
+        <cxf.version>3.4.4</cxf.version>
     </properties>
 
     <!--nexus-->

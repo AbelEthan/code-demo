@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <customParam xmlns="http://qxm.com/">
+            <param1>para1</param1>
+            <param2>para2</param2>
+            <param3>para3</param3>
+        </customParam>
+    </soap:Body>
+</soap:Envelope>
