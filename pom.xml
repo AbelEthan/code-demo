@@ -12,6 +12,7 @@
     <modules>
         <module>aspose-demo</module>
         <module>webservice-demo</module>
+        <module>websocket-demo</module>
     </modules>
 
     <properties>
