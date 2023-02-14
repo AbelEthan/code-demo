@@ -23,7 +23,7 @@
 
 
 
-> 采用工厂模式进行office系列转换
+> 采用模板模式进行office系列转换
 - 新建抽象类`AbstractFileConvert`
  ```java
 public abstract class AbstractFileConvert {
