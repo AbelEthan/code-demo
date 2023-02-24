@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>websocket-demo</artifactId>
+    <artifactId>request-param-demo</artifactId>
 
     <dependencies>
         <dependency>
@@ -28,11 +28,10 @@
             <artifactId>spring-boot-starter-undertow</artifactId>
             <version>${spring.boot.version}</version>
         </dependency>
-        <!--websocket-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-websocket</artifactId>
-            <version>${spring.boot.version}</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${fastjson.version}</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -40,5 +39,4 @@
             <version>${lombok.version}</version>
         </dependency>
     </dependencies>
-
 </project>
