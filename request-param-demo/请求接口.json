@@ -1,0 +1,356 @@
+{
+  "project": {
+    "name": "默认离线项目",
+    "description": "",
+    "details": {
+      "markList": [
+        {
+          "key": "developing",
+          "name": "开发中",
+          "color": "#3A86FF",
+          "is_default": true
+        },
+        {
+          "key": "complated",
+          "name": "已完成",
+          "color": "#2BA58F",
+          "is_default": true
+        },
+        {
+          "key": "modifying",
+          "name": "需修改",
+          "color": "#EC4646",
+          "is_default": true
+        }
+      ],
+      "script": {
+        "pre_script": "",
+        "test": ""
+      },
+      "request": {
+        "query": [],
+        "header": [],
+        "body": []
+      }
+    }
+  },
+  "apis": [
+    {
+      "target_type": "folder",
+      "name": "demo",
+      "mark": "developing",
+      "sort": 1,
+      "request": {
+        "description": "测试接口"
+      },
+      "children": [
+        {
+          "target_type": "api",
+          "name": "条件查询列表",
+          "mark": "developing",
+          "sort": 1,
+          "method": "GET",
+          "mock": "{}",
+          "mock_url": "/demo/list",
+          "request": {
+            "url": "/demo/list?id=1&name=名称&age=23",
+            "description": "",
+            "event": {
+              "pre_script": "",
+              "test": ""
+            },
+            "query": {
+              "parameter": [
+                {
+                  "description": "",
+                  "field_type": "String",
+                  "is_checked": 1,
+                  "key": "id",
+                  "value": "1",
+                  "not_null": 1,
+                  "type": "Text"
+                },
+                {
+                  "description": "",
+                  "field_type": "String",
+                  "is_checked": 1,
+                  "key": "name",
+                  "value": "名称",
+                  "not_null": 1,
+                  "type": "Text"
+                },
+                {
+                  "description": "",
+                  "field_type": "String",
+                  "is_checked": 1,
+                  "key": "age",
+                  "value": "23",
+                  "not_null": 1,
+                  "type": "Text"
+                }
+              ]
+            }
+          },
+          "response": {
+            "success": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "成功",
+                "isDefault": 1,
+                "code": 200,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            },
+            "error": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "失败",
+                "isDefault": -1,
+                "code": 404,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            }
+          },
+          "children": []
+        },
+        {
+          "target_type": "api",
+          "name": "通过id删除",
+          "mark": "developing",
+          "sort": 4,
+          "method": "DELETE",
+          "mock": "{}",
+          "mock_url": "/demo/1",
+          "request": {
+            "url": "/demo/1",
+            "description": "",
+            "event": {
+              "pre_script": "",
+              "test": ""
+            }
+          },
+          "response": {
+            "success": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "成功",
+                "isDefault": 1,
+                "code": 200,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            },
+            "error": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "失败",
+                "isDefault": -1,
+                "code": 404,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            }
+          },
+          "children": []
+        },
+        {
+          "target_type": "api",
+          "name": "通过id查询详情",
+          "mark": "developing",
+          "sort": 1,
+          "method": "GET",
+          "mock": "{}",
+          "mock_url": "/demo",
+          "request": {
+            "url": "/demo?id=1",
+            "description": "",
+            "event": {
+              "pre_script": "",
+              "test": ""
+            },
+            "query": {
+              "parameter": [
+                {
+                  "description": "",
+                  "field_type": "String",
+                  "is_checked": 1,
+                  "key": "id",
+                  "value": "1",
+                  "not_null": 1,
+                  "type": "Text"
+                }
+              ]
+            }
+          },
+          "response": {
+            "success": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "成功",
+                "isDefault": 1,
+                "code": 200,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            },
+            "error": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "失败",
+                "isDefault": -1,
+                "code": 404,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            }
+          },
+          "children": []
+        },
+        {
+          "target_type": "api",
+          "name": "添加",
+          "mark": "developing",
+          "sort": 3,
+          "method": "POST",
+          "mock": "{}",
+          "mock_url": "/demo",
+          "request": {
+            "url": "/demo",
+            "description": "",
+            "event": {
+              "pre_script": "",
+              "test": ""
+            },
+            "body": {
+              "mode": "json",
+              "parameter": [],
+              "raw": "{\r\n    \"name\": \"word\",\r\n    \"age\": 15\r\n}",
+              "raw_para": []
+            }
+          },
+          "response": {
+            "success": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "成功",
+                "isDefault": 1,
+                "code": 200,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            },
+            "error": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "失败",
+                "isDefault": -1,
+                "code": 404,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            }
+          },
+          "children": []
+        },
+        {
+          "target_type": "api",
+          "name": "修改",
+          "mark": "developing",
+          "sort": 2,
+          "method": "PUT",
+          "mock": "{}",
+          "mock_url": "/demo",
+          "request": {
+            "url": "/demo",
+            "description": "",
+            "event": {
+              "pre_script": "",
+              "test": ""
+            },
+            "body": {
+              "mode": "json",
+              "parameter": [],
+              "raw": "{\r\n    \"id\": 11,\r\n    \"name\": \"word\",\r\n    \"age\": 15\r\n}",
+              "raw_para": []
+            }
+          },
+          "response": {
+            "success": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "成功",
+                "isDefault": 1,
+                "code": 200,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            },
+            "error": {
+              "raw": "",
+              "parameter": [],
+              "expect": {
+                "name": "失败",
+                "isDefault": -1,
+                "code": 404,
+                "contentType": "json",
+                "verifyType": "schema",
+                "mock": "",
+                "schema": {}
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "envs": [
+    {
+      "env_id": "-1",
+      "list": {},
+      "name": "默认环境",
+      "pre_url": ""
+    },
+    {
+      "env_id": "-2",
+      "list": {},
+      "name": "Mock环境",
+      "pre_url": "https://console-mock.apipost.cn/mock/0d778ade-07f9-4387-ad15-7b9bff43a918/"
+    },
+    {
+      "env_id": "94e54c3d-5930-4f85-a0a5-f484b8928959",
+      "list": {},
+      "name": "本地",
+      "pre_url": "http://localhost:8080"
+    }
+  ]
+}
