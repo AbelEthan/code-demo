@@ -1,4 +1,4 @@
-package com.qxm;
+package com.qxm.demo1;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;

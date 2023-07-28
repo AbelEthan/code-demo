@@ -14,6 +14,8 @@
         <module>webservice-demo</module>
         <module>websocket-demo</module>
         <module>request-param-demo</module>
+        <module>zip-demo</module>
+        <module>aspose-check-demo</module>
     </modules>
 
     <properties>

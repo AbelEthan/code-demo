@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * @ClassName: {@link ${NAME}}
+ * @ClassName: {@link DemoApplication}
  * @Author AbelEthan
  * @Email AbelEthan@126.com
  * @Date ${DATE} ${TIME}
