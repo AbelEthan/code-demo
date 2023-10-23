@@ -4,22 +4,22 @@ spring:
   mqtt:
     provider:
       #MQTT服务地址，端口号默认1883，如果有多个，用逗号隔开
-      url: tcp://39.100.229.199:1883
+      url: tcp://127.0.0.1:1883
       #用户名
-      username: hjmqtt
+      username: admin
       #密码
-      password: Hjmqtt@2020
+      password: 123456
       #客户端id(不能重复)
       client-id: provider_id
       #MQTT默认的消息推送主题，实际可在调用接口是指定
       topic: test
     consumer:
       #MQTT服务地址，端口号默认1883，如果有多个，用逗号隔开
-      url: tcp://39.100.229.199:1883
+      url: tcp://127.0.0.1:1883
       #用户名
-      username: hjmqtt
+      username: admin
       #密码
-      password: Hjmqtt@2020
+      password: 123456
       #客户端id(不能重复)
       client-id: consumer_id
       #MQTT默认的消息推送主题，实际可在调用接口是指定
