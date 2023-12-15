@@ -17,6 +17,7 @@
         <module>zip-demo</module>
         <module>aspose-check-demo</module>
         <module>mqtt-demo</module>
+        <module>easyexcel-demo</module>
     </modules>
 
     <properties>
