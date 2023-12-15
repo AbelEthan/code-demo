@@ -6,3 +6,4 @@
 * [springboot使用过滤器+拦截器获取请求参数](./request-param-demo)
 * [springboot如何对接webservice](./webservice-demo)
 * [springboot如何对接websocket](./websocket-demo)
+* [springboot正确使用chatglm](./chatglm-demo)
