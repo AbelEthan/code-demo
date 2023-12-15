@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Receive Server Sent Events</title>
+</head>
+<body>
+<ul id="message">
+</ul>
+
+<input id="content" type="text">
+<button type="submit" onclick="submitContent()">提交</button>
+
+<script>
+    // 获取 ul 元素
+    let ulElement = document.querySelector('ul');
+
+    function submitContent() {
+        let content = document.getElementById("content").value;
+
+        // 创建 li 元素
+        let liElement = document.createElement('li');
+
+        // 设置 li 的文本内容
+        liElement.textContent = content;
+
+        // 将 li 元素追加到 ul 中
+        ulElement.appendChild(liElement);
+
+        // 创建一个 EventSource 对象
+        let eventSource = new EventSource('http://127.0.0.1:8080/api/completions?content=' + content); // 指定服务器端的 SSE URL
+
+        eventSource.onopen = function () {
+            console.log('Connection opened');
+        };
+
+        eventSource.onerror = function (e) {
+            eventSource.close();
+            console.log('Error occurred', e);
+        };
+
+        eventSource.onmessage = function (e) {
+            // console.log(e);
+            // 创建 li 元素
+            let liElement = document.createElement('li');
+
+            // 设置 li 的文本内容
+            liElement.textContent = e.data;
+
+            // 将 li 元素追加到 ul 中
+            ulElement.appendChild(liElement);
+            if (e.data == "对话完成") {
+                eventSource.close();
+            }
+        }
+    }
+</script>
+</body>
+</html>

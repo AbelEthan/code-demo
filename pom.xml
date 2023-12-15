@@ -18,6 +18,7 @@
         <module>aspose-check-demo</module>
         <module>mqtt-demo</module>
         <module>easyexcel-demo</module>
+        <module>chatglm-demo</module>
     </modules>
 
     <properties>

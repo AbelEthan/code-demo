@@ -1,0 +1,8 @@
+server:
+  servlet:
+    context-path: /api
+chatglm:
+  config:
+    enabled: true
+    api-host: https://open.bigmodel.cn/
+    api-secret-key: 2487bbcb59ed914e4ac5984c107c46f0.sVyIfx******
