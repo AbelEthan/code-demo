@@ -7,11 +7,12 @@ import cn.bugstack.chatglm.model.Role;
 import cn.bugstack.chatglm.session.OpenAiSession;
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.zmqx.chatglm.dto.RequestDTO;
 import com.zmqx.chatglm.listner.ChatGMLEventSourceListener;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
@@ -39,12 +40,12 @@ public class ApiController {
         this.openAiSession = openAiSession;
     }
 
-    @GetMapping("/completions")
-    public SseEmitter completions(String content, HttpServletResponse response) throws JsonProcessingException {
+    @PostMapping("/completions")
+    public SseEmitter completions(@RequestBody RequestDTO dto, HttpServletResponse response) throws JsonProcessingException {
         response.setContentType("text/event-stream");
         response.setCharacterEncoding("UTF-8");
         SseEmitter emitter = new SseEmitter();
-        ChatCompletionRequest request = getRequest(content);
+        ChatCompletionRequest request = getRequest(dto.getContent());
         // 请求
         openAiSession.completions(request, new ChatGMLEventSourceListener(emitter));
         return emitter;

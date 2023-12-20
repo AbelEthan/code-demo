@@ -29,8 +29,6 @@ public class ChatGMLEventSourceListener extends EventSourceListener {
     @Override
     public void onEvent(EventSource eventSource, String id, String type, String data) {
         ChatCompletionResponse response = JSON.parseObject(data, ChatCompletionResponse.class);
-//                httpServerResponse.send
-        System.out.println(response.getData());
         emitter.send(response.getData());
         if (EventType.finish.getCode().equals(type)) {
             ChatCompletionResponse.Meta meta = JSON.parseObject(response.getMeta(), ChatCompletionResponse.Meta.class);
@@ -42,7 +40,7 @@ public class ChatGMLEventSourceListener extends EventSourceListener {
     @Override
     public void onClosed(EventSource eventSource) {
         log.info("对话完成");
-        emitter.send("对话完成");
+        emitter.send("[DONE]");
         emitter.complete();
     }
 }
