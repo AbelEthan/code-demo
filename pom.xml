@@ -19,6 +19,7 @@
         <module>mqtt-demo</module>
         <module>easyexcel-demo</module>
         <module>chatglm-demo</module>
+        <module>dahua-demo</module>
     </modules>
 
     <properties>
